@@ -12,7 +12,7 @@ std::list<SEXP> flattenList(List x){
     {
     if (TYPEOF(x[i]) == VECSXP)
       {
-      o.splice(o.end(),test(x[i]));
+      o.splice(o.end(),flattenList(x[i]));
     } else 
       {
       o.push_back(x[i]);
