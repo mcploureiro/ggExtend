@@ -6,6 +6,7 @@
   match(x,names(val)):match(y,names(val))
 }
 #Helper function to get the environment
+#Note - must use sys.call() because "match.call does not support primitive functions (where argument matching is normally positional)."
 getEnvi <- function(i) {
   if(any(sapply(as.list(sys.call(-i)), function(x) "[.data.frame" == x)) | 
      any(sapply(as.list(sys.call(-i)), function(x) "[.data.table" == x))) { 
