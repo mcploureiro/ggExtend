@@ -3,11 +3,6 @@ library(grid)
 library(gridExtra)
 library(gtable)
 
-library(ggplot2)
-library(grid)
-library(gridExtra)
-library(gtable)
-
 #Function to align a ggplot object with a tableGrob with the y-axis. Can align either left or right
 ##Pos = 0 puts table on left Pos = - 1 puts table on right
 ggplot_align_table_s <- function( p, df, axis = "axis-l", pos = 0){
